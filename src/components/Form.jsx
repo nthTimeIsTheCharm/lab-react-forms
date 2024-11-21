@@ -7,7 +7,7 @@ function Form({students, setStudents}){
     const [email, setEmail] = useState("");
     const [program, setProgram] = useState("Web Dev");
     const [graduationYear, setGraduationYear] = useState(2023);
-    const [graduated, setGraduated] = useState();
+    const [graduated, setGraduated] = useState(false);
 
     function handleSubmit(e) {
     e.preventDefault();
@@ -23,6 +23,16 @@ function Form({students, setStudents}){
     };
 
     setStudents([newStudent, ...students]);
+
+    setFullName("");
+    setImage("");
+    setPhone("");
+    setEmail("");
+    setProgram("Web Dev");
+    setGraduationYear(2023);
+    setGraduated(false);
+
+
     }
 
     return (
@@ -99,7 +109,7 @@ function Form({students, setStudents}){
             >
               <option value="">-- None --</option>
               <option value="Web Dev">Web Dev</option>
-              <option value="UXUI">UXUI</option>
+              <option value="UXUI">UX UI</option>
               <option value="Data">Data</option>
             </select>
           </label>
